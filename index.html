@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/primitive.css">
+    <style type="text/css">
+    .small-container {
+        margin-top: 20vh;
+    }
+    </style>
+</head>
+<div class="small-container">
+<div>
+<h1>Search sutra</h1>
+
+<form id="search_form">
+    <input type="text" id="userinput">
+    <input type="submit" value="Submit">
+</form>
+
+<a href="sutra/1.1.1.html">
+    <button class="muted-button">1.1.1</button>
+</a>
+</div>
+</div>
+
+<script type="text/javascript">
+document.querySelector('#search_form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    window.location.href = "sutra/" + document.getElementById("userinput").value + ".html";
+});
+</script>
